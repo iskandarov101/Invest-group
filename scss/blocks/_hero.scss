@@ -1,0 +1,36 @@
+.hero {
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 160px 0;
+}
+.hero__title {
+  color: #000;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+.hero__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@include breakpoint-down (600) {
+  .hero {
+    padding: 100px 0;
+  }
+  .hero__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+@include breakpoint-down (400) {
+  .hero {
+    padding: 70px 0;
+  }
+  .hero__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,66 @@
+.social {
+  align-items: center;
+}
+.social__btn {
+  padding: 15px 20px 15px 80px;
+  font-size: 18px;
+  color: #5B86D4;
+  margin: 0 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center left;
+  border-radius: 10px;
+  font-weight: 700;
+  overflow: hidden;
+  overflow: hidden;
+  box-shadow: 2px 4px 15px 0 rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.social__btn:hover {
+  box-shadow: 0 0 0 0;
+}
+.social__btn--instagram {
+  background-image: url("../img/instagram-icon.svg");
+}
+.social__btn--facebook {
+  background-image: url("../img/facebook-icon.svg");
+}
+.social__btn--telegram {
+  background-image: url("../img/telegram-icon.svg");
+}
+
+
+@include breakpoint-down (830) {
+  .social__btn {
+    font-size: 16px;
+    padding: 10px 20px 10px 60px;
+  }
+}
+@include breakpoint-down (720) {
+  .social__btn {
+    font-size: 14px;
+    padding: 8px 20px 8px 50px;
+  }
+}
+@include breakpoint-down (650) {
+  .social__btn {
+    font-size: 14px;
+    padding: 8px 20px 8px 40px;
+    margin: 0 10px;
+  }
+}
+@include breakpoint-down (515) {
+  .social {
+    flex-direction: column;
+  }
+  .social__btn {
+    margin-bottom: 20px;
+    padding: 10px 20px 10px 60px;
+    font-size: 16px;
+  }
+}

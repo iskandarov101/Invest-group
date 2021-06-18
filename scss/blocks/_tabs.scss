@@ -1,0 +1,35 @@
+.tabs {
+  display: flex;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.tabs__item {
+  position: relative;
+}
+.tabs__text {
+  margin: 0;
+  font-size: 15px;
+}
+
+
+
+@include breakpoint-down (700) {
+  .tabs {
+    flex-direction: column;
+  }
+}
+@include breakpoint-down (560) {
+  .tabs__text {
+    font-size: 14px;
+  }
+}
+@include breakpoint-down (500) {
+  .tabs {
+    padding: 10px 5px;
+    margin: 0 -20px;
+  }
+}

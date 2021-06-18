@@ -1,0 +1,63 @@
+.btn-feedback {
+  display: inline-block;
+  background-color: #5B86D4;
+  color: #fff;
+  border: 2px solid #5B86D4;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-feedback:hover {
+  background-color: transparent;
+  color: #5B86D4;
+}
+
+
+.burger-menu {
+  display: inline-block;
+  background-image: url("../img/gamburger.svg");
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  margin-left: 130px;
+  transition: transform 0.3s ease;
+}
+
+
+.header-scroll .btn-feedback {
+  display: none;
+}
+
+.header-scroll .burger-menu {
+  transform: translateX(110%);
+}
+
+
+@include breakpoint-down (870) {
+  .burger-menu {
+    margin-left: 50px;
+  }
+}
+@include breakpoint-down (680) {
+  .burger-menu {
+    margin-left: 30px;
+  }
+}
+@include breakpoint-down (590) {
+  .btn-feedback {
+    display: none;
+  }
+}
+@include breakpoint-down (500) {
+  .header-scroll .burger-menu {
+  transform: translateX(0%);
+}
+}

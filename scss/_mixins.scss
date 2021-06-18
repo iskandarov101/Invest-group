@@ -1,0 +1,63 @@
+@mixin reset-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+
+@mixin triangle-right ($size, $color) {
+  border-left: $size solid $color;
+  border-top: #{$size * 2 / 3}px solid transparent;
+  border-bottom: #{$size * 2 / 3}px solid transparent;
+}
+
+@mixin triangle-left ($size, $color) {
+  border-right: $size solid $color;
+  border-top: #{$size * 2 / 3}px solid transparent;
+  border-bottom: #{$size * 2 / 3}px solid transparent;
+}
+
+@mixin triangle-up ($size, $color) {
+  border-bottom: $size solid $color;
+  border-left: #{$size * 2 / 3}px solid transparent;
+  border-right: #{$size * 2 / 3}px solid transparent;
+}
+
+@mixin triangle-down ($size, $color) {
+  border-top: $size solid $color;
+  border-left: #{$size * 2 / 3}px solid transparent;
+  border-right: #{$size * 2 / 3}px solid transparent;
+}
+
+@mixin retina-bg {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) {
+
+    @content;
+
+  }
+}
+
+
+@mixin breakpoint-down ($size) {
+  @media only screen and (max-width: #{$size}px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-up ($size) {
+  @media only screen and (min-width: #{$size}px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between ($min-size, $max-size) {
+  @media only screen and (min-width: #{$min-size}px) and (max-width: #{$max-size}px) {
+    @content;
+  }
+}

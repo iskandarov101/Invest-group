@@ -1,0 +1,42 @@
+.header {
+  padding: 10px 0;
+  position: relative;
+  height: 117px;
+  transition: height 0.3s ease;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+
+.header__btn {
+  margin-left: 140px;
+}
+
+.header-scroll {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 52px;
+  z-index: 3;
+}
+
+@include breakpoint-down (870) {
+  .header__btn {
+    margin-left: 50px;
+  }
+}
+@include breakpoint-down (680) {
+  .header__btn {
+    margin-left: 30px;
+  }
+}
+
+@include breakpoint-down (500) {
+  .header-scroll {
+    position: relative;
+    height: 117px;
+  }
+}

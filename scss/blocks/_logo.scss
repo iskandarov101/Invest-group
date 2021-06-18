@@ -1,0 +1,45 @@
+.logo {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: auto;
+  width: 153px;
+}
+
+.logo__img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo__img-small {
+  position: absolute;
+  opacity: 0;
+  transition: transform 0.3s ease;
+  width: 40px;
+}
+
+.header-scroll .logo__img--header{
+  display: none;
+}
+
+.header-scroll .logo__img-small {
+  display: inline-block;
+  position: relative;
+  opacity: 1;
+  vertical-align: middle;
+  transform: translateX(-105%);
+}
+
+@include breakpoint-down (500) {
+  .header-scroll .logo__img-small {
+    display: none;
+  }
+
+  .header-scroll .logo__img--header{
+  display: inline-block;
+}
+}
+@include breakpoint-down (370) {
+  .logo {
+    width: 120px;
+  }
+}
